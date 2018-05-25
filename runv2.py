@@ -14,11 +14,11 @@ def index():
 
 @app.route('/createSong')
 def createSong():
+	# testing values
 	bpm = 105
 	key = "D"
 	length = "short"
-	profileKey = 18
-
+	profileKey = 1 #update this for each test subject
 
 	songcreator = SongCreator.SongCreator(
 		bpm=bpm,
