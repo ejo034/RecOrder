@@ -1,0 +1,104 @@
+/*
+colors
+
+$color1: rgba(38, 48, 137, 1);
+$color2: rgba(36, 146, 193, 1);
+$color3: rgba(135, 209, 255, 1);
+$color4: rgba(173, 232, 255, 1);
+$color5: rgba(225, 221, 255, 1);
+
+*/
+
+body {
+  padding-top: 10vh;
+  background-color: #F1EFFF;
+}
+
+
+footer{
+	font-size: 2vmin;
+}
+
+nav {
+	color: #1985A1;
+	background-color: white;
+	
+}
+
+.navbar-brand{
+	background-color: white;
+}
+
+
+.jumbo{
+	color: white;
+	background-color: rgba(36, 146, 193, 1);
+	padding-bottom: 3vh;
+	padding-top: 1vh;
+}
+
+.main-content{
+	background-color: white;
+	padding-bottom: 5vh;
+	padding-top: 2vh
+}
+
+
+h1{
+	font-size: 19vmin;
+}
+/*
+h2 .main{
+	font-size: 6vmin;
+}
+h3 .main, h4 .main{
+	font-size: 4vmin;
+}
+
+*/
+
+table .main{
+	border-spacing: 1vmin;
+	border-collapse: separate;
+}
+
+
+
+#slidecontainer {
+    width: 100%; /* Width of the outside container */
+}
+
+/* The slider itself */
+.slider {
+    -webkit-appearance: none;  /* Override default CSS styles */
+    appearance: none;
+    width: 100%; /* Full-width */
+    height: 25px; /* Specified height */
+    background: #d3d3d3; /* Grey background */
+    outline: none; /* Remove outline */
+    opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+    -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+    transition: opacity .2s;
+}
+
+/* Mouse-over effects */
+.slider:hover {
+    opacity: 1; /* Fully shown on mouse-over */
+}
+
+/* The slider handle (use webkit (Chrome, Opera, Safari, Edge) and moz (Firefox) to override default look) */ 
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    width: 25px; /* Set a specific slider handle width */
+    height: 25px; /* Slider handle height */
+    background: rgba(36, 146, 193, 1); /* blue background */
+    cursor: pointer; /* Cursor on hover */
+}
+
+.slider::-moz-range-thumb {
+    width: 25px; /* Set a specific slider handle width */
+    height: 25px; /* Slider handle height */
+    background: rgba(36, 146, 193, 1); /* Green background */
+    cursor: pointer; /* Cursor on hover */
+}

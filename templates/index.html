@@ -1,0 +1,29 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+<div class="container main-content">
+	<div class="jumbotron">
+		<h1>Song Generator</h1>
+		<p>This is a song generator that use recommender systems to create music</p>
+	</div>
+
+	<div class="container">
+
+		<div class="row">
+			<div class="col-md-12" style="text-align: center;">
+
+				<h3>Click to create a song</h3>
+				<p>
+					Clicking the button will start the process of generating a new song. <br> Open the PyCharm terminal
+				</p>
+
+				<form>
+					<input class="btn btn-primary" value="Create Song" type="button" onclick="window.location.href='/createSong'">
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+
+{% endblock %}
