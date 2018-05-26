@@ -1,0 +1,8 @@
+index,structure,length
+1,ABAB,short
+2,ABCABC,short
+3,ABAC,short
+4,ABCAAB,short
+5,ABABCABCC,medium
+6,ABCABDECC,medium
+7,ABCABCDEFDCBCC,long

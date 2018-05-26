@@ -1,0 +1,15 @@
+CREATE DEFINER=`` PROCEDURE `getUserFullPreference2`(
+	in in_userid INT(10)
+)
+BEGIN
+	select 
+		up.userID, 
+        up.clipcliplinkID,
+        up.rating
+    from 
+		userpreference as up
+    where
+		up.userID = in_userid
+    ;
+
+END

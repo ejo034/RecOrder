@@ -1,0 +1,7 @@
+CREATE DEFINER=`` PROCEDURE `getAllClipClipRelations`(
+)
+BEGIN
+	select id from clipcliplink ;
+
+END
+

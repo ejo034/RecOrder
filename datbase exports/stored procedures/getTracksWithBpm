@@ -1,0 +1,16 @@
+CREATE DEFINER=`` PROCEDURE `getTracksWithBpm`(
+	in in_bpm int(10)
+)
+BEGIN
+	select *
+    from tracks
+    where (
+			tracks.bpm = in_bpm 
+			|| 
+			tracks.bpm = (in_bpm / 2)
+            ||
+            tracks.bpm = (in_bpm * 2)
+          );
+
+
+END

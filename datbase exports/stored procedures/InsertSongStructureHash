@@ -1,0 +1,14 @@
+CREATE DEFINER=`` PROCEDURE `InsertSongStructureHash`(
+	in in_structure varchar(100)
+)
+BEGIN
+	insert into renderedsongs 
+    (
+		structureHash
+    )
+    values
+    (
+		in_structure
+    );
+    
+END

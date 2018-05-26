@@ -1,0 +1,16 @@
+CREATE DEFINER=`` PROCEDURE `getAllUsersPreferences`()
+BEGIN
+	select 
+		up.userID, 
+        ccl.clip_id_1, 
+        ccl.clip_id_2, 
+        up.rating
+    
+    from 
+		userpreference as up, 
+        clipcliplink as ccl
+        
+    where
+        up.clipcliplinkID = ccl.id
+	;
+END

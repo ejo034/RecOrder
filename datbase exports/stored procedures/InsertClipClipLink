@@ -1,0 +1,21 @@
+CREATE DEFINER=`` PROCEDURE `InsertClipClipLink`(
+    in in_clip1 int(11),
+    in in_clip2 int(11)
+)
+BEGIN
+    
+    INSERT INTO clipcliplink (clip_id_1, clip_id_2)
+	SELECT * FROM (SELECT in_clip1, in_clip2) AS tmp
+	WHERE NOT EXISTS (
+		SELECT 
+			clip_id_1, 
+            clip_id_2 
+		FROM 
+			clipcliplink 
+		WHERE 
+			clip_id_1 = in_clip1 
+			and 
+			clip_id_2 = in_clip2
+	) LIMIT 1;
+    
+END

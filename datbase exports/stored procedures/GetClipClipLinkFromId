@@ -1,0 +1,9 @@
+CREATE DEFINER=`` PROCEDURE `GetClipClipLinkFromId`(
+	in in_id int(10)
+)
+BEGIN
+    SELECT clipcliplink.clip_id_1, clipcliplink.clip_id_2
+    FROM clipcliplink 
+    where clipcliplink.id = in_id
+    ;
+END

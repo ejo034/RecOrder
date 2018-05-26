@@ -1,0 +1,7 @@
+CREATE DEFINER=`` PROCEDURE `GetAllUserProfileIds`()
+BEGIN
+	select distinct up.userID 
+    from 
+		userpreference as up
+	;
+END

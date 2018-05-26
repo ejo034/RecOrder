@@ -1,0 +1,15 @@
+CREATE DEFINER=`` PROCEDURE `GetClipClipIdFromClips`(
+	in clip1 INT(10),
+    in clip2 INT(10)
+)
+BEGIN
+    SELECT 
+		ccl.id 
+	FROM 
+		clipcliplink as ccl
+    WHERE
+		ccl.clip_id_1 = clip1
+        &&
+        ccl.clip_id_2 = clip2
+	;
+END

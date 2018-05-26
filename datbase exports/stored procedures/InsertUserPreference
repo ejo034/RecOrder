@@ -1,0 +1,27 @@
+CREATE DEFINER=`` PROCEDURE `InsertUserPreference`(
+    in in_userId int(11),
+    in in_clipcliplinkID int(11),
+    in in_rating float4
+)
+BEGIN
+    
+    
+	insert into userpreference(
+		userID, 
+        clipcliplinkID, 
+        rating
+	)
+	SELECT * FROM (SELECT in_userId, in_clipcliplinkID, in_rating) AS tmp
+	WHERE NOT EXISTS (
+		SELECT userID, clipcliplinkID, rating
+        FROM userpreference 
+        WHERE 
+			userID = in_userId and 
+            rating = in_rating and
+            clipcliplinkID = in_clipcliplinkID
+	) LIMIT 1;
+    
+    
+    
+
+END

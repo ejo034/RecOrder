@@ -1,0 +1,15 @@
+CREATE DEFINER=`` PROCEDURE `getTracksWithBpmKeyAndInstrument`(
+	in in_bpm int(10),
+    in in_key varchar(10),
+    in in_instrumentId int(10)
+)
+BEGIN
+	select *
+    from tracks
+    where (tracks.bpm = in_bpm || tracks.bpm = (in_bpm / 2) || tracks.bpm = (in_bpm * 2)) && 
+		  (tracks.key = in_key)  &&
+          (tracks.instrumentId = in_instrumentId)
+          ;
+
+
+END

@@ -1,0 +1,9 @@
+CREATE DEFINER=`` PROCEDURE `getTrackLength`(
+	in in_trackId int(10)
+)
+BEGIN
+	select tracks.bars
+    from tracks
+    where tracks.id = in_trackId;
+
+END

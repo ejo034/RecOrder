@@ -1,0 +1,9 @@
+CREATE DEFINER=`` PROCEDURE `GetSongStructureHash`(
+	in in_index varchar(45)
+)
+BEGIN
+	select renderedsongs.structureHash
+    from renderedsongs
+    where 
+		renderedsongs.songIndex = in_index;
+END

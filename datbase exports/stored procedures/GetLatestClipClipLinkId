@@ -1,0 +1,5 @@
+CREATE DEFINER=`` PROCEDURE `GetLatestClipClipLinkId`(
+)
+BEGIN
+    SELECT id FROM clipcliplink ORDER BY id DESC LIMIT 1;
+END

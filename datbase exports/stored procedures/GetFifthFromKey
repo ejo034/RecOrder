@@ -1,0 +1,11 @@
+CREATE DEFINER=`` PROCEDURE `GetFifthFromKey`(
+	in in_key varchar(10)
+)
+BEGIN
+	select 
+		musickey.Fifth
+    from 
+		musickey
+    where 
+		musickey.Name = in_key;
+END

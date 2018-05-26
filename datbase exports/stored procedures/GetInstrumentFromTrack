@@ -1,0 +1,8 @@
+CREATE DEFINER=`` PROCEDURE `GetInstrumentFromTrack`(
+	in keyIn int(45)
+)
+BEGIN
+	select *
+    from tracks
+    where tracks.id = keyIn;
+END

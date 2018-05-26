@@ -1,0 +1,10 @@
+CREATE DEFINER=`` PROCEDURE `GetStructuresWithLength`(
+	in in_length varchar(45)
+)
+BEGIN
+	select 
+		sStruct.structure
+    from songstructures sStruct
+    where 
+		sStruct.length = in_length;
+END
